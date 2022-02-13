@@ -1,6 +1,6 @@
 // Gerekli kütüphaneyi çağır
 const http = require("http");
-const kisiler = require("./data.json")
+const persons = require("./data.json")
 
 // Serverı olustur 
 const server = http.createServer((req,res) => {
@@ -12,7 +12,7 @@ const server = http.createServer((req,res) => {
     // res.write("{name: 'Ahmet'}");
 
     res.setHeader("Content-Type","application/json");   //  Geriye json döneceğini belirt
-    res.write(JSON.stringify(kisiler)); //  kisiler verisini string'e çevir
+    res.write(JSON.stringify(persons)); //  persons verisini string'e çevir
     res.end();  //  bitir
 })
 
